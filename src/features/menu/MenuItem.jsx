@@ -4,11 +4,11 @@ import {addItem, getCurrentQuantityById} from '../cart/cartSlice.js';
 import {useDispatch, useSelector} from 'react-redux';
 import DeleteItem from '../cart/DeleteItem.jsx';
 import UpdateItemQuantity from '../cart/UpdateItemQuantity.jsx';
-
+import imageUrl from '../../images/pizza.jpeg'
 // eslint-disable-next-line react/prop-types
 function MenuItem({ pizza }) {
   // eslint-disable-next-line react/prop-types
-  const { id, name, unitPrice, ingredients, soldOut, imageUrl } = pizza;
+  const { id, name, unitPrice, ingredients, soldOut } = pizza;
 
   const dispatch = useDispatch();
   const currentQuantity = useSelector(getCurrentQuantityById(id));
